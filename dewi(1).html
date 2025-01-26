@@ -1,4 +1,6 @@
-<!doctype html>
+
+      
+ <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -38,7 +40,7 @@
       /* Custom column widths */
       .col-5 { width: 45%; }
       .col-12 { width: 100%;} 
-      .col-11{width:32%;}
+      .col-11{width:35%;}
 
       /* Responsive adjustments */
       @media only screen and (max-width: 768px) {
@@ -50,7 +52,79 @@
         }
       }
       .ver-1 { height: auto; }
-      
+      .image-container:hover img {
+      transform: scale(1.5);
+    }
+    .image-container {
+      position: relative;
+      width: 30%; /* Adjust width for responsiveness */
+      margin-bottom: 20px;
+    }
+    .image-container img {
+      width: 100%;
+      height: auto; /* Maintain aspect ratio */
+    }
+    .half-block {
+      position: absolute;
+      bottom: 0; /* Align the block at the bottom of the image */
+      left: 0;
+      background-color: white;border:2px solid white; /* Red with 50% transparency */
+      width: 80%; /* Cover the full width of the image */
+      height: 50%; 
+      margin-left:50px;
+      box-shadow: 0.1 0.1 0.1 rgb(107, 105, 105);
+      padding:10px;/
+       half the height of the image */
+    }
+    .container {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .container img {
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.2s ease;
+    }
+
+    .container .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(133, 131, 131, 0.7); /* Light gray overlay */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .container .overlay span {
+      color: white;
+      background-color: red;
+      border: 2px solid black;
+      padding: 5px 10px;
+      font-size: 18px;
+      font-weight: bold;
+      vertical-align: top left;
+    }
+
+    .container:hover .overlay {
+      opacity: 1;
+    }
+
+    .container:hover img {
+      opacity: 0.5;
+    }       
+    
+    input{background:none;
+  border:none;
+outline:none;}    
     </style>
   </head>
   <body>
@@ -100,33 +174,264 @@
     <div class="row ver-1">
       <div class="col-5" style="margin:30px;padding:20px;">
         <p>Voluptatem dignissimos provident laboris nisi ut aliquip ex ea commodo</p>
-        <img src="s_picture.png" alt="image" style="width:100%; height:auto;">
+        <img src="s_picture.png" alt="image" style="width:100%; height:auto;">Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.
+
+        Temporibus nihil enim deserunt sed ea. Provident sit expedita aut cupiditate nihil vitae quo officia vel. Blanditiis eligendi possimus et in cum. Quidem eos ut sint rem veniam qui. Ut ut repellendus nobis tempore doloribus debitis explicabo similique sit. Accusantium sed ut omnis beatae neque deleniti repellendus.
       </div>
       <div class="col-5" style="margin:30px;padding:20px;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.
+
+        Temporibus nihil enim deserunt sed ea. Provident sit expedita aut cupiditate nihil vitae quo officia vel. Blanditiis eligendi possimus et in cum. Quidem eos ut sint rem veniam qui. Ut ut repellendus nobis tempore doloribus debitis explicabo similique sit. Accusantium sed ut omnis beatae neque deleniti repellendus.
         <img src="s_picture2.png" alt="image" style="width:100%; height:auto;">
       </div>
     </div>
 
     <br>
     <div style="background-color:rgb(177, 175, 175);width:100%;padding:100px;" class="row">
-      <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px; ">233</div>
-      <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px;">232</div>
-      <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px;">232</div>
-      <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px;">232</div>
+      <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px; border:2px solid black;" ><img src="s.png" alt="simle"><h5>232</h5>Happy Clients</div>
+      <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s2.png" alt="simle"><h5>521</h5>Projects</div>
+      <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s3.png" alt="simle"><h5>1463</h5>Hours of Support</div>
+      <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s4.png" alt="simle"><h5>15</h5>Hard Workers</div>
     </div>
     <br>
   
       <h3> SERVICES<span style=color:orangered>__________</span></h3>
       <h1>Featured Srvices</h1>
       <div style="width:100%;padding:70px;height:500px;" class="row">
-        <div style="height:300px;padding:30px;"class="col-11"><img src="t_picture.png" alt="image" style="width:100%;height:300px;"></div>
-        <div style="height:300px;padding:30px;"class="col-11"><img src="t_picture.png" alt="image" style="width:100%;height:300px;"></div>
+        <div style="height:400px;padding:30px;"class="col-11 image-container"><img src="t_picture.png" alt="image" style="width:100%;height:300px;">
+        <div  class="half-block"><span style="color:orangered;">Nesciuent meta</span><br>
+        <span style=font-size:12px;">Provide nihil minus qui consequator</span></div></div>
+        <div style="height:300px;padding:30px;"class="col-11 image-container"><img src="t_picture.png" alt="image" style="width:100%;height:300px;"><div  class="half-block"><span style="color:orangered;">Nesciuent meta</span><br>
+          <span style=font-size:12px;">Provide nihil minus qui consequator</span></div></div>
 
-        <div style="height:300px;padding:30px;"class="col-11"><img src="t_picture.png" alt="image" style="width:100%;height:300px;"></div>
+        <div style="height:300px;padding:30px;"class="col-11 image-container"><img src="t_picture.png" alt="image" style="width:100%;height:300px;"><div  class="half-block"><span style="color:orangered;">Nesciuent meta</span><br>
+          <span style=font-size:12px;">Provide nihil minus qui consequator</span></div></div>
 
 
 
     </div>
+  
+    <div style="width:100%;height:120px;"><img src="f_picture.png" alt="image"></div>
+    <br>
+    <div style="background-color:rgb(177, 175, 175);width:100%;padding:40px;" class="row">
+      <div style="width:280px;height:auto;color:white;text-align:center;float:left;background-color:orangered;margin:10px;border:2px solid black;"onmouseover="bor()" id="b" onmouseout="out()" ><img src="s8.png" alt="simle">
+        MOdi sit est dela pireda 
+      </div>
+      <div style="width:280px;height:auto;color:black;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;"onmouseover="bor()" id="b" onmouseout="out()"><img src="s9.png" alt="simle">Unde prasenti
+        mara setra 
+      </div>
+      <div style="width:280px;height:auto;color:black;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s10.png" alt="simle">pariatur explica nitro </div>
+      <div style="width:280px;height:auto;color:black;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s11.png" alt="simle">Nostrum qui dile </div>
+    </div>
+    <br>
+    
+    <div class="row ver-1">
+      <div class="col-5" style="margin:30px;padding:20px;">
+        <h2>Voluptatem dignissimos provident laboris nisi ut aliquip ex ea commodo</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+          Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit.
+          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.
+      
+      Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit.
+          Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit.
+          Ullamco laboris nisi ut aliquip ex ea commodo consequat
+      </p>
+      </div>
+      <div class="col-5" style="margin:30px;padding:20px;">
+      
+        <img src="s_picture2.png" alt="image" style="width:100%; height:auto;">
+      </div>
+    </div>
+    <div style="background-color:rgb(223, 247, 247);color:black;padding:30px;">
+      <h2>Services<span>___________</span></h2>
+      <h1 style="font-size:40px;"> CHECK OUR SERVICES</h1>
+      <div style="background-color:rgb(177, 175, 175);width:100%;padding:40px;" class="row">
+        <div style="width:480px;height:auto;color:white;padding:30px;float:left;background-color:orangered;margin:40px;text-align: justify;border:2px solid black; " onmouseover="bor()" id="b" onmouseout="out()"><div style="float:left;"><img src="s8.png" alt="simle" ></div>
+          <div style="float:left;"><h3>Lorem ipusm</h3></div>
+        </div>
+        <div style="width:480px;height:auto;color:black;padding:30px;text-align:center;float:left;background-color:white;margin:40px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s10.png" alt="simle" ></div>
+        <div style="float:left;"><h3>Lorem ipusm</h3></div>
+      
+        </div>
+        <div style="width:480px;height:auto;color:black;padding:30px;text-align:center;float:left;background-color:white;margin:40px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s11.png" alt="simle" ></div>
+        <div style="float:left;"><h3>Lorem ipusm</h3></div></div>
+        <div style="width:480px;height:auto;color:black;padding:30px;text-align:center;float:left;background-color:white;margin:40px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s12.png" alt="simle" ></div>
+        <div style="float:left;"><h3>Lorem ipusm</h3></div></div>
+        <div style="width:480px;height:auto;color:black;padding:30px;text-align:center;float:left;background-color:white;margin:40px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s14.png" alt="simle" ></div>
+        <div style="float:left;"><h3>Lorem ipusm</h3></div></div>
+        <div style="width:480px;height:auto;color:black;padding:30px;text-align:center;float:left;background-color:white;margin:40px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s13.png" alt="simle" ></div>
+        <div style="float:left;"><h3>Lorem ipusm</h3></div></div>
+      </div>
+    </div>
+<br>
+<div style="background-image: url('office_2.jpg'); width: 100%; height: 500px; background-position: center; background-attachment: fixed; background-repeat: no-repeat; background-size: cover; display: flex; justify-content: center; align-items: center; font-size: 2rem; color: orangered; font-weight: bold; text-align: center;font-size:50px;" id="text-container">
+  Welcome to the Website!
+</div>
+
+<script>
+  const texts = [
+      "Saul Goodman!",
+      "Enjoy the Beautiful Views!",
+      "Explore Our Amazing Features!",
+      "Contact Us Anytime!"
+  ];
+
+  let currentIndex = 0;
+  const textContainer = document.getElementById("text-container");
+
+  setInterval(() => {
+      currentIndex = (currentIndex + 1) % texts.length;
+      textContainer.textContent = texts[currentIndex];
+  }, 4000); // Change text every 4 seconds
+</script>
+<h3> PORTOLIO<span style=color:orangered>__________</span></h3>
+      <h1>CHECK OUR PORTFOL</h1>
+      <div style="width:100%;padding:70px;height:1400px;border:2ps solid black;" class="row">
+        <div class="container" style="height:400px;padding:30px;margin-left:50px;"class="col-11 image-container"><img src="t6.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
+          <span>Product1</span></div>
+        
+        </div>
+        <div class="container" style="height:300px;padding:30px;"class="col-11 image-container"><img src="t7.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
+          <span>Product</span></div></div>
+
+        <div class="container" style="height:300px;padding:30px;"class="col-11 image-container"><img src="t11.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
+          <span>Product</span></div></div>
+        <div class="container" style="height:400px;padding:30px;margin-left:50px;"class="col-11 image-container"><img src="t12.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
+          <span>Product</span></div>
+        
+        </div>
+        <div class="container" style="height:300px;padding:30px;"class="col-11 image-container"><img src="t6.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
+          <span>Product</span></div></div>
+
+        <div class="container" style="height:300px;padding:30px;"class="col-11 image-container"><img src="t9.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
+          <span>Product</span></div></div>
+
+        <div class="container" style="height:400px;padding:30px;margin-left:50px;"class="col-11 image-container"><img src="t3.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
+          <span>Product</span></div>
+        
+        </div>
+        <div class="container" style="height:300px;padding:30px;"class="col-11 image-container"><img src="t4.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
+          <span>Product</span></div></div>
+
+        <div  class="container" style="height:300px;padding:30px;"class="col-11 image-container"><img src="t5.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px; "><div class="overlay">
+          <span>Product</span></div></div>
+
+
+
+
+    </div>
+    <script>
+      function dis() {
+        document.getElementById('dis').innerHTML = "Product";
+        document.getElementById('dis').style.color = "white"; // Text color
+        document.getElementById('dis').style.backgroundColor = "red"; // Text background color
+        document.getElementById('dis').style.display = "inline"; // Ensures text background doesn't extend to block area
+      }
+    </script>
+    <br>
+    <h3> TEAM<span style=color:orangered>__________</span></h3>
+    <h1>CHECK OUR TEAM</h1>
+    <div style="width:100%;height:400px;;padding:40px;margin:40px;background-color:rgb(190, 221, 221)">
+      <div style="width:30%;height:300px;float:left;"><img src="team1.png"></div>
+      <div style="width:30%;height:300px;float:left;"><img src="team2.png"></div>
+      <div style="width:30%;height:300px;float:left;"><img src="team3.png"></div>
+    </div>
+    <br>
+    <h3> CONTACT<span style=color:orangered>__________</span></h3>
+    <h1>NECESSITATIBUS EIUS CONSEQUATUR</h1>
+    <div style="width:100%;height:550px;padding:40px;background-color:rgb(220, 250, 250)">
+      <div style="width:48%;height:460px;float:left;padding:30px;text-align:center;padding-top:30px;">
+        <div style="width:92%;height:200px;color:black;background-color:white;padding:20px;">Address<br>A108 Adam Steet,New york,Ny 5235022
+        </div>
+        <br>
+        <div style="width:48%;height:200px;padding:30px;color:black;float:left;background-color:white;margin:10px;">Call Us<br>
+        +155895548855</div>
+        <div style="width:40%;height:200px;padding:30px;color:black;float:left;background-color:white;margin:10px;">Email Us<br>info@example.com</div>
+      </div>
+      <div style="width:40%;height:450px;float:left;padding:30px;margin:30px;background-color:white;">
+        <form>
+          <p style="border:2px solid black;width:98%;height:50px;padding:10px"><input type="input" id="input" name="name" value="Your name" placeholder="Your Name" ></p>
+          <p style="border:2px solid black;width:98%;height:50px;padding:10px"><input type="input" id="input" name="name" value="Your Email" placeholder="Your Email" ></p>
+          <p style="border:2px solid black;width:98%;height:50px;padding:10px"><input type="input" id="input" name="name" value="Your name" placeholder="subject" ></p><br>
+          <textarea  id="input" name="message" cols="30" rows="5"placeholder="Your Name" ></textarea>
+        </form>
+        </div>
+      </div>
+      <div  style="width:100%;height:600px;background-color:black;color:white;padding:40px;">
+        <br>
+        <br>
+
+        <table   style="border-collapse: collapse;width:98%;margin:10px;padding:80px;">
+          <tr style=text-align:left;">
+            <th style="width:28%;font-weight: bold;">DEWI</th>
+            <th style="width:18%;font-weight: bold;">Useful links</th>
+            <th style="width:18%;font-weight: bold;">OUR Services</th>
+            <th style="width:28%;font-weight: bold;">Our Newsletter</th>
+          </tr>
+          <tr style="text-align:left;">
+            <td style="width:28%;"></td>
+            <td style="width:18%;">Home</td>
+            <td style="width:18%;">Web Design</td>
+            <td style="width:28%;" rowspan="5">subscribe to our newsletter and receive the latest newsletter about our products and services!  </td>
+          </tr>
+          <tr styl=text-align:left;">
+            <td style="width:28%;">A108 Adam Street</td>
+            <td style="width:18%;">About Us</td>
+            <td style="width:18%;">Web Development</td>
+            
+          </tr>
+          <tr style="text-align:left;">
+            <td style="width:28%;">New york,NY 535022</td>
+            <td style="width:18%;">Services</td>
+            <td style="width:18%;">Product Management</td>
+            
+          </tr>
+          <td>Email: info@example.com</td>
+    
+          <td>Terms of services</td>
+          <td>Marketing</td>
+        </tr>
+        <tr>
+          <td> Phone:+15589 55488 55</td>
+          <td>privacy policy</td>
+          <td>Graphic Design</td>
+        </tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <div style="border:2px solid white;width:150px;height:30px;float:left;"></div>
+          <div style="border:2px solid white;width:100px;height:30px;float:left;background-color:orangered;text-align:center;float:left;">subscribe</div>
+        </td>
+          
+        </table>
+      
+        <br>
+        <hr style="color:white;line-height: 5px;">
+        <h3 style="text-align:center;padding:50px;margin:50px;">@ copyright Dewi All Rights Reserved<br>
+        Designed by<span style="color:orangered;">BoostrapMade</span>Distributed by <span style="color:orangered;">Themewagon</span></h3>
+      </div>
+<script>
+  function bor(){
+    document.getElementById('b').style.borderColor="Orangered";
+  }
+  function out(){
+    document.getElementById('b').style.borderColor="black";
+  }
+</script>
   </body>
 </html>
+      
+      
+         
+                  
+
+    
+      
+        
