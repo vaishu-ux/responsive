@@ -1,6 +1,4 @@
-
-      
- <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -41,6 +39,12 @@
       .col-5 { width: 45%; }
       .col-12 { width: 100%;} 
       .col-11{width:35%;}
+      .col-13{width:30%;}
+      .col-14{width:48%;}
+      .col-15{width:40%;}
+      .col-16{width:30%;}
+      .col-17{width:28%;}
+      .col-18{width:18%}
 
       /* Responsive adjustments */
       @media only screen and (max-width: 768px) {
@@ -61,7 +65,7 @@
       margin-bottom: 20px;
     }
     .image-container img {
-      width: 100%;
+      
       height: auto; /* Maintain aspect ratio */
     }
     .half-block {
@@ -130,8 +134,8 @@ outline:none;}
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <div class="first">
-      <nav class="navbar navbar-expand-lg">
+    <div class="first" id="home">
+      <nav class="navbar navbar-expand-lg" style="position:fixed;background-color:black;width:100%;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" style="font-size:30px;">Dewi</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -140,13 +144,22 @@ outline:none;}
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" style="margin-left:200px;">Home</a>
+                <a class="nav-link active" aria-current="page" href="#home" style="margin-left:200px;">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#"about>About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#potfoio">portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">contact</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -163,7 +176,7 @@ outline:none;}
         </div>
       </nav>
       <br>
-      <h1 style="text-align:center;font-size:50px;">PLAN. LAUNCH. GROW.</h1>
+      <h1 style="text-align:center;font-size:50px;margin-top:150px;">PLAN. LAUNCH. GROW.</h1>
       <h3 style="text-align:center;">We are a team of talented designers making websites with Bootstrap</h3>
       <div style="text-align: center;">
         <button type="button" id="button" style="color:white;background-color:red;width:200px;height:40px;margin-top:20px;">GET STARTED</button>
@@ -171,7 +184,7 @@ outline:none;}
     </div>
 
     <br>
-    <div class="row ver-1">
+    <div class="row ver-1" id="about">
       <div class="col-5" style="margin:30px;padding:20px;">
         <p>Voluptatem dignissimos provident laboris nisi ut aliquip ex ea commodo</p>
         <img src="s_picture.png" alt="image" style="width:100%; height:auto;">Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.
@@ -187,8 +200,8 @@ outline:none;}
     </div>
 
     <br>
-    <div style="background-color:rgb(177, 175, 175);width:100%;padding:100px;" class="row">
-      <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px; border:2px solid black;" ><img src="s.png" alt="simle"><h5>232</h5>Happy Clients</div>
+    <div style="background-color:rgb(177, 175, 175);width:100%;padding:100px;" class="row" >
+      <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" onmouseover="bor()"id="b" onmouseout="out()" ><img src="s.png" alt="simle"><h5>232</h5>Happy Clients</div>
       <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s2.png" alt="simle"><h5>521</h5>Projects</div>
       <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s3.png" alt="simle"><h5>1463</h5>Hours of Support</div>
       <div style="width:250px;height:auto;color:black;padding:40px;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s4.png" alt="simle"><h5>15</h5>Hard Workers</div>
@@ -197,7 +210,7 @@ outline:none;}
   
       <h3> SERVICES<span style=color:orangered>__________</span></h3>
       <h1>Featured Srvices</h1>
-      <div style="width:100%;padding:70px;height:500px;" class="row">
+      <div style="width:100%;padding:70px;height:500px;" class="row" id="services" id="potfoio">
         <div style="height:400px;padding:30px;"class="col-11 image-container"><img src="t_picture.png" alt="image" style="width:100%;height:300px;">
         <div  class="half-block"><span style="color:orangered;">Nesciuent meta</span><br>
         <span style=font-size:12px;">Provide nihil minus qui consequator</span></div></div>
@@ -211,17 +224,17 @@ outline:none;}
 
     </div>
   
-    <div style="width:100%;height:120px;"><img src="f_picture.png" alt="image"></div>
+    
     <br>
     <div style="background-color:rgb(177, 175, 175);width:100%;padding:40px;" class="row">
-      <div style="width:280px;height:auto;color:white;text-align:center;float:left;background-color:orangered;margin:10px;border:2px solid black;"onmouseover="bor()" id="b" onmouseout="out()" ><img src="s8.png" alt="simle">
+      <div style="width:280px;height:auto;color:white;text-align:center;float:left;background-color:orangered;margin:10px;border:2px solid black;"class="div" onmouseover="dis(this)" ><img src="s8.png" alt="simle">
         MOdi sit est dela pireda 
       </div>
-      <div style="width:280px;height:auto;color:black;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;"onmouseover="bor()" id="b" onmouseout="out()"><img src="s9.png" alt="simle">Unde prasenti
+      <div style="width:280px;height:auto;color:black;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" class="div" onmouseover="dis(this)"><img src="s9.png" alt="simle">Unde prasenti
         mara setra 
       </div>
-      <div style="width:280px;height:auto;color:black;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s10.png" alt="simle">pariatur explica nitro </div>
-      <div style="width:280px;height:auto;color:black;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s11.png" alt="simle">Nostrum qui dile </div>
+      <div style="width:280px;height:auto;color:black;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" class="div" onmouseover="dis(this)"><img src="s10.png" alt="simle">pariatur explica nitro </div>
+      <div style="width:280px;height:auto;color:black;text-align:center;float:left;background-color:white;margin:10px;border:2px solid black;" class="div" onmouseover="dis(this)"><img src="s11.png" alt="simle">Nostrum qui dile </div>
     </div>
     <br>
     
@@ -251,21 +264,21 @@ outline:none;}
     <div style="background-color:rgb(223, 247, 247);color:black;padding:30px;">
       <h2>Services<span>___________</span></h2>
       <h1 style="font-size:40px;"> CHECK OUR SERVICES</h1>
-      <div style="background-color:rgb(177, 175, 175);width:100%;padding:40px;" class="row">
-        <div style="width:480px;height:auto;color:white;padding:30px;float:left;background-color:orangered;margin:40px;text-align: justify;border:2px solid black; " onmouseover="bor()" id="b" onmouseout="out()"><div style="float:left;"><img src="s8.png" alt="simle" ></div>
+      <div style="background-color:rgb(177, 175, 175);width:100%;padding:40px;" class="row ver-1">
+        <div style="height:auto;color:white;padding:10px;float:left;background-color:orangered;margin:20px;text-align: justify;border:2px solid black; " onmouseover="bor()" id="b" onmouseout="out()"><div style="float:left;" class="col-16"><img src="s8.png" alt="simle" ></div>
           <div style="float:left;"><h3>Lorem ipusm</h3></div>
         </div>
-        <div style="width:480px;height:auto;color:black;padding:30px;text-align:center;float:left;background-color:white;margin:40px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s10.png" alt="simle" ></div>
+        <div style="height:auto;color:black;padding:10px;text-align:center;float:left;background-color:white;margin:20px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()" class="col-16"><img src="s10.png" alt="simle" ></div>
         <div style="float:left;"><h3>Lorem ipusm</h3></div>
       
         </div>
-        <div style="width:480px;height:auto;color:black;padding:30px;text-align:center;float:left;background-color:white;margin:40px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s11.png" alt="simle" ></div>
+        <div style="height:auto;color:black;padding:10px;text-align:center;float:left;background-color:white;margin:20px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()" class="col-16"><img src="s11.png" alt="simle" ></div>
         <div style="float:left;"><h3>Lorem ipusm</h3></div></div>
-        <div style="width:480px;height:auto;color:black;padding:30px;text-align:center;float:left;background-color:white;margin:40px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s12.png" alt="simle" ></div>
+        <div style="height:auto;color:black;padding:10px;text-align:center;float:left;background-color:white;margin:20px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()" class="col-16"><img src="s12.png" alt="simle" ></div>
         <div style="float:left;"><h3>Lorem ipusm</h3></div></div>
-        <div style="width:480px;height:auto;color:black;padding:30px;text-align:center;float:left;background-color:white;margin:40px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s14.png" alt="simle" ></div>
+        <div style="height:auto;color:black;padding:10px;text-align:center;float:left;background-color:white;margin:20px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()" class="col-16"><img src="s14.png" alt="simle" ></div>
         <div style="float:left;"><h3>Lorem ipusm</h3></div></div>
-        <div style="width:480px;height:auto;color:black;padding:30px;text-align:center;float:left;background-color:white;margin:40px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()"><img src="s13.png" alt="simle" ></div>
+        <div style="height:auto;color:black;padding:10px;text-align:center;float:left;background-color:white;margin:20px;border:2px solid black;"><div style="float:left;" onmouseover="bor()" id="b" onmouseout="out()" class="col-16"><img src="s13.png" alt="simle" ></div>
         <div style="float:left;"><h3>Lorem ipusm</h3></div></div>
       </div>
     </div>
@@ -292,8 +305,8 @@ outline:none;}
 </script>
 <h3> PORTOLIO<span style=color:orangered>__________</span></h3>
       <h1>CHECK OUR PORTFOL</h1>
-      <div style="width:100%;padding:70px;height:1400px;border:2ps solid black;" class="row">
-        <div class="container" style="height:400px;padding:30px;margin-left:50px;"class="col-11 image-container"><img src="t6.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
+      <div style="width:100%;padding:70px;height:border:2ps solid black;" class="row" id="potfoio">
+        <div class="container" style="height:300px;padding:30px;margin-left:50px;"class="col-11 image-container"><img src="t6.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
           <span>Product1</span></div>
         
         </div>
@@ -302,7 +315,7 @@ outline:none;}
 
         <div class="container" style="height:300px;padding:30px;"class="col-11 image-container"><img src="t11.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
           <span>Product</span></div></div>
-        <div class="container" style="height:400px;padding:30px;margin-left:50px;"class="col-11 image-container"><img src="t12.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
+        <div class="container" style="height:300px;padding:30px;margin-left:50px;"class="col-11 image-container"><img src="t12.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
           <span>Product</span></div>
         
         </div>
@@ -312,7 +325,7 @@ outline:none;}
         <div class="container" style="height:300px;padding:30px;"class="col-11 image-container"><img src="t9.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
           <span>Product</span></div></div>
 
-        <div class="container" style="height:400px;padding:30px;margin-left:50px;"class="col-11 image-container"><img src="t3.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
+        <div class="container" style="height:300px;padding:30px;margin-left:50px;"class="col-11 image-container"><img src="t3.png" alt="image" style="width:100%;height:300px;border:2px solid black;padding:10px;"><div class="overlay">
           <span>Product</span></div>
         
         </div>
@@ -337,24 +350,25 @@ outline:none;}
     <br>
     <h3> TEAM<span style=color:orangered>__________</span></h3>
     <h1>CHECK OUR TEAM</h1>
-    <div style="width:100%;height:400px;;padding:40px;margin:40px;background-color:rgb(190, 221, 221)">
-      <div style="width:30%;height:300px;float:left;"><img src="team1.png"></div>
-      <div style="width:30%;height:300px;float:left;"><img src="team2.png"></div>
-      <div style="width:30%;height:300px;float:left;"><img src="team3.png"></div>
+    <div style="width:100%;height:400px;padding:40px;margin:40px;background-color:rgb(190, 221, 221)" class="row ver-1" id="team">
+      <div style="height:300px;float:left;" class="col-13"><img src="team1.png"></div>
+      <div style="height:300px;float:left;" class="col-13"><img src="team2.png"></div>
+      <div style="height:300px;float:left;" class="col-13"><img src="team3.png"></div>
     </div>
+    <br>
     <br>
     <h3> CONTACT<span style=color:orangered>__________</span></h3>
     <h1>NECESSITATIBUS EIUS CONSEQUATUR</h1>
-    <div style="width:100%;height:550px;padding:40px;background-color:rgb(220, 250, 250)">
-      <div style="width:48%;height:460px;float:left;padding:30px;text-align:center;padding-top:30px;">
+    <div style="width:100%;height:550px;padding:40px;background-color:rgb(220, 250, 250)" class="row ver-1" id="contact">
+      <div style="height:460px;float:left;padding:30px;text-align:center;padding-top:30px;" class="col-14">
         <div style="width:92%;height:200px;color:black;background-color:white;padding:20px;">Address<br>A108 Adam Steet,New york,Ny 5235022
         </div>
         <br>
-        <div style="width:48%;height:200px;padding:30px;color:black;float:left;background-color:white;margin:10px;">Call Us<br>
+        <div style="width:40%;height:200px;padding:30px;color:black;float:left;background-color:white;margin:10px;" >Call Us<br>
         +155895548855</div>
         <div style="width:40%;height:200px;padding:30px;color:black;float:left;background-color:white;margin:10px;">Email Us<br>info@example.com</div>
       </div>
-      <div style="width:40%;height:450px;float:left;padding:30px;margin:30px;background-color:white;">
+      <div style="height:450px;float:left;padding:30px;margin:30px;background-color:white;" class="col-15">
         <form>
           <p style="border:2px solid black;width:98%;height:50px;padding:10px"><input type="input" id="input" name="name" value="Your name" placeholder="Your Name" ></p>
           <p style="border:2px solid black;width:98%;height:50px;padding:10px"><input type="input" id="input" name="name" value="Your Email" placeholder="Your Email" ></p>
@@ -363,11 +377,45 @@ outline:none;}
         </form>
         </div>
       </div>
-      <div  style="width:100%;height:600px;background-color:black;color:white;padding:40px;">
+      <div  style="width:100%;height:auto;background-color:black;color:white;padding:40px;">
         <br>
         <br>
+        <div style="height:auto;font-weight: bold;float:left;"class="col-17"><h1>Dewi></h1><br>
+        A108 Adam Street<br>
+      New York,NY 535022<br>
+    Phone:+5589 55488 55
+  <br>
+Email:info@example.com</div>
+<div style="height:auto;font-weight: bold;float:left;"class="col-18">
+  <h1>Useful links</h1><br>
+  Home<br>
+  About Us<br>
+  services<br>
+  Terms of services<br>
+  Privacy policy<br>
 
-        <table   style="border-collapse: collapse;width:98%;margin:10px;padding:80px;">
+
+</div>
+<div style="height:auto;font-weight: bold;float:left;"class="col-18">
+  <h1>Our services
+  </h1>
+  Web Design<br>
+  Web Development<br>
+  Product Management<br>
+  Marketing<br>
+  Graphic Design<br>
+</div>
+<div style="height:auto;font-weight: bold;float:left;"class="col-17">
+  <h1>Our Newsletter</h1>
+  <p>Subscribe to our newsletter and receive the latest news about our product and services!</p>
+  <div style="border:2px solid white;width:150px;height:30px;float:left;"></div>
+          <div style="border:2px solid white;width:100px;height:30px;float:left;background-color:orangered;text-align:center;float:left;">subscribe</div>
+
+</div>
+
+
+
+        <!--<table   style="border-collapse: collapse;width:98%;margin:10px;padding:80px;">
           <tr style=text-align:left;">
             <th style="width:28%;font-weight: bold;">DEWI</th>
             <th style="width:18%;font-weight: bold;">Useful links</th>
@@ -410,24 +458,36 @@ outline:none;}
           <div style="border:2px solid white;width:100px;height:30px;float:left;background-color:orangered;text-align:center;float:left;">subscribe</div>
         </td>
           
-        </table>
+        </table>-->
       
+        <br>
         <br>
         <hr style="color:white;line-height: 5px;">
         <h3 style="text-align:center;padding:50px;margin:50px;">@ copyright Dewi All Rights Reserved<br>
         Designed by<span style="color:orangered;">BoostrapMade</span>Distributed by <span style="color:orangered;">Themewagon</span></h3>
       </div>
-<script>
-  function bor(){
-    document.getElementById('b').style.borderColor="Orangered";
-  }
-  function out(){
-    document.getElementById('b').style.borderColor="black";
-  }
-</script>
+      <script>
+        function dis(element) {
+            element.style.borderColor = "orangered";
+        }
+    </script>
+  
+
   </body>
 </html>
       
+
+
+   
+      
+        
+
+
+   
+           
+            
+        
+  
       
          
                   
